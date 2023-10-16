@@ -1,0 +1,13 @@
+@model AlmoCar.ViewModel.ItemListViewModel
+
+@{
+    ViewData["Title"] = "Cardapio";
+}
+<partial name="_Carousel" />
+<h1>@Model.CategoriaAtual</h1>
+<div class="row">
+    @foreach (var Item in Model.Itens)
+    {
+        <partial name="_Card" for="@Item"></partial>
+    }
+</div>
